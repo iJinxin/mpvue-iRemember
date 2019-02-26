@@ -4,8 +4,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 // import './assets/font/iconfont.css'
 import App from './App'
 
-// import store from './store/index'
-// import router from './router'
+import store from './store/index'
+import router from './router'
 
 // import './assets/css/index.scss' // global scss
 

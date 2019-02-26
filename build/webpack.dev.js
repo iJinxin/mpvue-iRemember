@@ -38,7 +38,6 @@ const devWebpackConfig = merge(commonWebpackConfig, {
       filename: 'index.html',
       template: 'index.html',
       inject: true,
-      favicon: resolve('favicon.ico'),
       title: 'funnyCoding'
     }),
 
