@@ -1,19 +1,18 @@
 {
   "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "modules": false,
-        "targets": "> 0.25%, not dead",
-        // for uglifyjs...
-        // "forceAllTransforms": api.env("production")
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
       }
-    ]
+    }],
+    "stage-2"
   ],
-  "plugins": [
-    "transform-vue-jsx",
-    ["@babel/plugin-transform-runtime"],
-    ["@babel/plugin-proposal-pipeline-operator", { "proposal": "minimal" }],
-    ["@babel/plugin-syntax-dynamic-import"]
-  ]
+  "plugins": ["transform-runtime"],
+  "env": {
+    "test": {
+      "presets": ["env", "stage-2"],
+      "plugins": ["istanbul"]
+    }
+  }
 }
